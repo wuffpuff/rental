@@ -1,2 +1,1 @@
-# rental
-Just a CSS Project
+https://wuffpuff.github.io/rental/
