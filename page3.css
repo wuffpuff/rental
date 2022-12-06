@@ -1,0 +1,708 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'poppins', sans-serif;
+    line-height: 1.5rem;
+    letter-spacing: .03rem;
+}
+
+.header {
+    width: 100%;
+    background-color:white;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1% 5%;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 15px -2px rgb(197, 197, 197);
+
+}
+
+.logo, .nav-button-container {
+
+    width: 25%;
+}
+
+.logo p {
+    letter-spacing: 1.5em;
+    font-size: x-large;
+    font-weight: 600;
+    color: tomato;
+}
+
+
+
+nav > a{
+    text-decoration: none;
+    color: #444444;
+    font-size: 1.3em;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+nav > a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    margin: auto; /*adding margin helps to animation start from the middle*/
+    transition: 0.2s;
+}
+
+nav > a:hover::after {
+    width: 100%;
+    background-color: tomato;
+}
+.nav-button{
+    padding: 0.5em 1.6em;
+    color:tomato;
+    border-radius: 25px;
+    border: 1px solid tomato;
+    text-decoration:none;
+    float: right;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background-color: tomato;
+    color:white;
+}
+
+.fa-bars {
+    visibility:hidden;
+    color: white;
+}
+
+/*--------------------------------------------House Details Page---------------------------------*/
+
+.main-content {
+    width: 80%;
+    margin:auto;
+    margin-top: 5rem;
+}
+
+.main-content h1{
+    margin-bottom: 1.2rem;
+}
+
+.main-content .star-icons {
+    display: inline-block;
+    margin-right: 1.4rem;
+}
+
+.main-content span:first-of-type {
+    margin-right:1rem;
+}
+
+.container-images {
+    width: 100%;
+    height: 50vh;
+    display:flex;
+    margin-top:1.3%;
+}
+
+
+.img-alone {
+    flex-basis: 50%;
+    padding-right:0.5rem;
+    overflow: hidden;
+}
+
+.img-alone img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+}
+
+.img-grid {
+    flex-basis: 50%;
+    padding-left:0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-grid img {
+    width: 50%;
+    height: 50%;
+}
+
+.img1 {
+    padding:0 0.5rem 0.5rem 0;
+}
+
+.img2 {
+    padding: 0 0 .5rem  .5rem;
+    border-top-right-radius:20px;
+
+}
+
+.img3 {
+    padding:.5rem .5rem 0 0; 
+}
+
+.img4 {
+    padding:.5rem 0 0 .5rem;
+    border-bottom-right-radius: 20px;
+}
+
+.main-content h2{
+    margin:0 0 .5rem;
+}
+
+.owner-info {
+    display:flex;
+    margin-top:2rem;
+    width: 40%;
+    height: 3.3rem;
+}
+
+.owner-info div:first-of-type {
+    flex-basis:85%;
+}
+
+.owner-info img {
+    max-width:100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+.owner-info div:last-of-type {
+    flex-basis:15%;
+    text-align: right;
+}
+
+.border-bottom {
+    border-bottom:1.5px solid rgb(201, 201, 201);
+    width: 65%;
+    margin-top:5rem
+}
+
+.container-checkbar {
+    width: 80%;
+    display: flex;
+    justify-content:space-between;
+    border-radius: 20px;
+    box-shadow: 0 0 18px rgb(192, 192, 192);
+    padding: 1.2rem;
+    margin-top: 3rem;
+}
+
+.checkin {
+    flex-basis: 20%;
+    border-right: 1px solid rgb(201, 201, 201);
+    margin-left: 1em;
+}
+.checkin p, .checkout p, .guests p {
+    margin:.5em 0 .3em 0;
+}
+
+.checkin input, .checkout input, .guests input {
+    border: none;
+}
+
+.checkin input:focus, .checkout input, .guests input{
+    outline: none;
+    border: none;
+}
+
+.checkout {
+    flex-basis:20%;
+    border-right:1px solid rgb(201, 201, 201);
+    margin-left: 2em;
+}
+
+.guests {
+    flex-basis:20%;
+    border-right: 1px solid rgb(201, 201, 201);
+    margin-left:2em;
+}
+
+.check-button {
+    flex-basis: 60%;
+}
+
+.checkbutton {
+    background-color: tomato;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    border: none;
+    color: white;
+    font-size:1.2em;
+    padding: 1em;
+    float: right;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+.checkbutton:hover {
+    background-color: rgb(223, 85, 61);
+
+}
+
+/*-----------------------------Brief-features---------------------------------------*/
+
+.brief-features {
+    margin-top: 4rem;
+    color: #444444;
+}
+
+.small-container {
+    display:flex;
+    margin-top: 1.7rem;
+}
+
+.brief-icons {
+    width: 3rem;
+    height: 3rem;
+}
+
+.brief-features i {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.text-row p {
+    margin-top: 0.3rem;
+}
+
+.area-description {
+    width: 70%;
+    letter-spacing:.03rem;
+    line-height:1.5rem;
+    margin-top: 3rem;
+}
+
+/*-------------------------------------second-content----------------------------------*/
+
+.secondary-content {
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+    height: auto;
+}
+
+.longimg{
+    width: 100%;
+    margin: auto;
+    position: relative;
+
+}
+
+.longimg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: inherit;
+}
+
+.longimg img:last-of-type {
+    margin-top:1rem;
+}
+
+.longimg h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    opacity: 1;
+}
+
+.layer-long {
+    background: linear-gradient(rgba(100, 100, 100, 0.7),rgba(90, 90, 90, 0.1));
+    width: 100%;
+    height: 100%;
+    border-radius:20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    transition:0.35s ease-in-out;
+}
+
+.layer-long:hover{
+    opacity: 0;
+    top: 55%;
+}
+
+/*----------------------------Review section------------------------------------*/
+
+.reviews {
+    width:100%; /*of the parent <section class="secondary-content">*/
+    margin: auto;
+    margin-top:5rem
+}
+
+.container-review {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.sub-container {
+    width: 45%;
+    height: 200px;
+    margin-bottom: 2rem;
+}
+
+
+
+.author-img{
+    width: 100%;
+    display: flex;
+}
+
+.sub-container img {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.author-name {
+    margin: 1rem;
+    line-height: 1.3rem;
+}
+
+.author-name h4 {
+    color: #444444;
+}
+
+.author-name p {
+    color: #8a8a8a;
+}
+
+.sub-container > p {
+    margin-top: 1rem;
+    line-height:1.5rem;
+    letter-spacing: .03rem;
+}
+
+.reviews .fa-star, .reviews .fa-star-half-o{
+    font-size: 1.6rem;
+}
+.reviews span {
+    margin-left:1rem;
+    font-size:1.6rem
+}
+
+/*-----------------------------Map-----------------------------------------------*/
+
+.container-map {
+    width: 100%;
+    height: 60vh;
+    background-color:grey;
+    margin-top: 5rem;
+}
+
+.container-map iframe {
+    width: inherit;
+    height: inherit;
+    border: none;
+}
+/*-----------------------------------Owner Info----------------------------------*/
+
+.policy {
+    width: 80%;
+    margin: auto;
+}
+
+.personal-info {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.row-info {
+    display:flex;
+    align-items: center;
+}
+
+.owner-img img {
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+}
+
+.info-owner {
+    margin-left: 1rem;
+    line-height:1.5rem;
+
+}
+
+.fa-check-square {
+    color: tomato;
+}
+
+.personal-review {
+    display: flex;
+    margin-top: 1rem;
+}
+
+
+.personal-review div:last-child {
+    margin-left: 3rem;
+}
+
+.personal-review .fa-star {
+    margin: .7rem 1rem 0 0;
+}
+
+.personal-review .fa-check-square {
+    margin:.7rem 1rem 0 0;
+}
+
+.info-details {
+    margin-top: 3rem;
+}
+
+.info-details p {
+    margin-bottom: 1.5rem;
+}
+
+.info-details a {
+    background-color: transparent;
+    text-decoration:none;
+    color: tomato;
+    border: 1px solid tomato;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    margin-top:2rem;
+    display: inline-block;
+    transition:0.23s ease-in-out;
+}
+
+.info-details a:hover {
+    background-color:tomato;
+    color: white;
+}
+
+.container-notice {
+    width: 100%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.notice {
+    width: 100%;
+    display: flex;
+    justify-content:space-betweem;
+    margin-top:2rem;
+}
+
+.notice div {
+    margin-bottom: 1rem;
+}
+
+.notice span {
+    margin-left: 1rem;
+}
+
+.notice a {
+    color: black;
+}
+
+.house-rules {
+    flex-basis:30%;
+}
+
+.health-safety {
+    flex-basis: 30%;
+}
+
+.cancellation {
+    flex-basis: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+    .logo {
+        padding-top: 5%;
+        position: fixed;
+        top: 15px;
+        left: 30px;
+    }
+
+
+
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        padding: 110px 7% 0;
+        text-align: right;
+        background-color:rgba(22, 22, 22, 0.96);
+        max-height:100px;
+        overflow: hidden;
+        transition:0.4s;
+    }
+
+    .nav-button-container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        padding-left: 22%;
+    }
+
+    .nav-button {
+        margin: 2em 0;
+    }
+
+    .header .fa-bars {
+        visibility: visible;
+        color: white;
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        font-size: 20px;
+    }
+
+    .dropdown-menu {
+        max-height:350px;
+    }
+    
+    footer h1 {
+        margin-top: 15%;
+        font-size: 4vw;
+    }
+
+    footer p, .copyright {
+        font-size:2vw;
+    }
+
+
+   
+
+    /*-------------------------------Page 3 House details--------------------------------*/
+
+    .main-content {
+        margin-top: 10rem;
+        width: 90%;
+    }
+
+    .container-images {
+        flex-direction:column;
+        margin:3rem 0;
+    }
+
+    .img-alone {
+        padding-right: 0;
+        padding-bottom:.5rem;
+    }
+
+    .img-alone img {
+        border-top-right-radius:20px;
+        border-bottom-left-radius: 0;
+    }
+
+    .img-grid {
+        padding-left:0;
+    }
+
+    .img-grid .img2 {
+        border-top-right-radius:0;
+    }
+
+    .img-grid .img3 {
+        border-bottom-left-radius:20px;
+    }
+
+    .owner-info {
+        width: 100%;
+        margin-bottom:2rem;
+    }
+
+    .container-checkbar {
+        flex-direction:column;
+        width:100%;
+    }
+
+    .guests, .checkout {
+        margin-left: 1em;
+    }
+
+    .checkin, .checkout, .guests {
+        border-right:none;
+    }
+
+    .checkin, .checkout {
+        border-bottom:1px solid rgba(201, 201, 201);
+    }
+
+    .check-button {
+        text-align: center;
+        margin-top:2rem;
+    }
+    .checkbutton {
+        float: none;
+        padding: .5em 1em;
+        width: 100%;
+    }
+
+    .area-description {
+        width: 90%;
+    }
+
+    .longimg h3 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .container-review{
+        flex-direction:column;
+    }
+
+    .sub-container {
+        width:100%;
+        margin-top: 5rem;
+    }
+
+    .policy {
+        width: 87%;
+    }
+
+    .notice {
+        flex-direction: column;
+    }
+
+
+
+
+}
+
+   

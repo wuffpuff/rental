@@ -1,0 +1,748 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:'poppins', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url(images/header.jpg);
+    background-position:center;
+    background-size: cover;
+    position: relative;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1% 5%;
+    align-items: center;
+    background-color: rgba(252, 238, 217, 0.3);
+}
+
+.logo, .nav-button-container {
+
+    width: 25%;
+}
+
+.logo p {
+    letter-spacing: 1.5em;
+    font-size: x-large;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+nav > a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+nav > a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    margin: auto; /*adding margin helps to animation start from the middle*/
+    transition: 0.2s;
+}
+
+nav > a:hover::after {
+    width: 100%;
+    background-color: tomato;
+}
+.nav-button{
+    padding: 0.5em 1.6em;
+    background-color: rgb(255, 255, 255);
+    color:rgb(143, 141, 138);
+    border-radius: 25px;
+    border: none;
+    text-decoration:none;
+    float: right;
+    font-size: 1.3em;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background-color: tomato;
+    color:white;
+}
+
+.fa-bars {
+    visibility:hidden;
+    color: white;
+}
+/*---------------------------search bar properties-------------------------------*/
+
+
+
+.search-container {
+transform: translate(0, 35em);
+    
+}
+
+.search-container h1 {
+    font-size: 2vw;
+}
+
+.mobile-search-heading {
+    visibility: hidden;
+    display: none;
+}
+
+.heading-search {
+    text-align: center;
+    padding-bottom:3%;
+    color: white;
+    letter-spacing: 3px;
+
+}
+
+.search-bar{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    background-color: white;
+    color: #444444;
+    justify-content: space-between;
+    padding: 0.8em 0.8em 0.8em 2.2em;
+    border-radius: 50px;
+    align-content: flex-end;
+}
+
+.search-col {
+    border-left: 1px solid rgb(211, 211, 211);
+    padding-left: 2%;
+
+
+}
+
+.search-col:nth-of-type(1) {
+    border: none;
+
+}
+
+
+select {
+    width: 200px;
+    padding-top: 0.5em;
+    color: rgb(143, 143, 143);
+    border: none;
+}
+
+option:focus{
+    width:50px;
+}
+
+.search-icon button {
+    height: 3.8em;
+    width: 3.8em;
+    background-color: tomato;
+    border-radius: 50px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:0.2s ease-in-out;
+}
+
+.search-icon button:hover {
+    box-shadow: 1px 1px 7px 1px rgb(133, 133, 133);
+}
+
+select {
+    transition: 0.2s ease-in-out;
+    padding: 7px 0;
+    background: transparent;
+
+}
+
+select:hover {
+    background-color: tomato;
+    color: white;
+    border-radius: 25px;
+    padding: 7px;
+}
+
+select:focus{
+    outline: none;
+}
+
+
+.check-in {
+    border: none;
+    transition:0.3s ease-in-out;
+    max-width: 130px;
+    min-width: 130px;
+    outline: none;
+    padding: 7px 0;
+    border-radius: 25px;
+ 
+}
+
+
+
+.check-in:hover {  
+    background-color: tomato;
+  
+    padding-left: 7px;
+}
+
+/*chrome does not recognie white color for PLACEHOLDER - so "-webkit-" is used. And trasition 
+didnt work somehow. thats why they are separate from above .check-in:hover */
+.check-in:hover::-webkit-input-placeholder {
+    color: white;
+}
+
+.check-in[onfocus] {
+    max-height: 2.2em;
+    color: rgb(143, 143, 143);
+}
+
+.check-in[onfocus]:hover { /*hover effect may seem unneeded, but for such a messy code
+                            hover effect make everything smooth. delete hover and see*/
+    color: white;
+}
+
+/*to hide calendar and x button on "date" */
+.searchbar input[type="date"]::-webkit-inner-spin-button, 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: white;
+    filter: invert(1);
+    -webkit-appearance: none;
+}
+
+ 
+.check-out {
+    outline: none;
+    border: none;
+    min-width: 130px;
+    max-width: 130px;
+    padding: 7px 0;
+    border-radius:25px;
+    transition: 0.3s;
+}
+
+.check-out:hover {
+    color: white;
+    padding-left:7px;
+    background-color:tomato;
+}
+
+.check-out:hover::-webkit-input-placeholder {
+    color: white;
+}
+
+.check-out[onfocus] {
+    max-height: 2.2em;
+    color: rgb(143, 143, 143);
+}
+
+.check-out[onfocus]:hover {
+    color: white;
+}
+
+/*--------------------------------------Countries Section----------------------------------*/
+
+.countries {
+    width: 90%;
+    margin: auto;
+    margin-top: 8%;
+}
+
+.countries h1 {
+    margin-bottom: 3%;
+    font-size: 1.8vw;
+    color: #444444;
+}
+
+.c-row-up {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.c-row-down {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+.cc-column {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-right: 2%;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+.cc-column:nth-of-type(5) {
+    margin-right: 0;
+}
+
+.cc-column img {
+    display: inherit; /*The inherit CSS keyword causes the element for which it is specified to take the computed value of the property from its parent element.*/
+    width: 100%;
+    border-radius:10px;
+    row-gap: 50px;
+    text-align: center;
+    position: relative;
+    background-position: center;
+    background-size: contain;
+
+}
+
+.cc-column span {
+    color: rgb(255, 255, 255);
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.layer {
+    background: transparent;
+    position:absolute;
+    width: 100%;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*--------------------------------Optimal Section-------------------------------------*/
+
+.optimal {
+    width: 90%;
+    margin: auto;
+    margin-top: 8%;
+}
+
+.optimal h1 {
+    margin-bottom:3%;
+    font-size:1.8vw;
+    color: #444444;
+}
+
+.container-optimal {
+    width: 100%;
+    display: flex;
+}
+
+.opt-column {
+    width: 100%;
+    margin-right:2%;
+}
+
+.opt-column:last-of-type {
+    margin-right:0;
+}
+
+.opt-column img {
+    width: 100%;
+    position: relative;
+    background-position:center ;
+    background-size: contain;
+    border-radius: 10px;
+}
+
+.opt-column h3 {
+    font-size: 1vw;
+    margin-top: 3%;
+    color: #444444;
+}
+
+/*-------------------------------Long-image section-----------------------------------*/
+
+.long-image {
+    width: 90%;
+    margin:auto;
+    margin-top:8%;
+    
+}
+
+.img-container {
+    width:100%;
+    position:relative;
+    
+    
+}
+
+.img-container img {
+    width: 100%;
+    background-position:center;
+    background-size:contain;
+    position: relative;
+    border-radius:10px;
+}
+
+.img-container span{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform:translate(-50%, -50%)
+}
+
+.head-text {
+    margin-bottom: 4%;
+    color:white;
+    font-size:2.8vw;
+    font-weight:540;
+    transition: 0.2s ease-in-out;
+}
+
+
+.description-text {
+    color:white;
+    font-size:1vw;
+    font-weight:500;
+    transition: 0.2s ease-in-out;
+}
+
+
+.long-image a {
+    display: inline-block;
+    margin-top:2rem;
+    border-radius: 25px;
+    padding: 0.7rem 1.7rem;
+    background-color:tomato;
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+/*------------------------------------Traveller Review------------------------------*/
+
+.traveller-review {
+    width:90%;
+    margin:auto;
+    margin-top:8%;
+    text-align: center;
+}
+
+.traveller-review h1 {
+    text-align: left;
+    margin-bottom:3%;
+    font-size:1.8vw;
+    color: #444444;
+}
+
+.container-review {
+    width:100%;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+}
+
+.rev-column {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-right: 2%;
+}
+
+.rev-column:nth-of-type(3){
+    margin-right:0;
+}
+
+.rev-column img {
+    display: inherit;
+    width: 100%;
+    border-radius:10px;
+    position:relative;
+}
+
+.rev-column p {
+    width: 70%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -35%);
+    text-align:center;
+    font-size: 1.2vw;
+    letter-spacing: 1.5px;
+    color:rgb(255, 255, 255);
+    border-radius: 10px;
+    padding:3% 0;
+}
+
+.rev-layer {
+    width:100%;
+    height: 100%;
+    border-radius:10px;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    opacity: 1;
+    transform:translate(-50%, -50%);
+    background: linear-gradient(rgba(139, 139, 139, 0.1), rgba(85, 75, 69, 0.8));
+    transition: 0.3s ease-in-out;
+}
+
+.rev-column:hover .rev-layer{ /*use hover for parent */
+    
+    opacity:0;
+    top: 30%;
+    transform:translate(-50%, -50%);
+}
+
+.bookhouse, .renthouse {
+    display:inline-block;
+    background-color:transparent;
+    border: 1px solid tomato;
+    color: tomato;
+    text-decoration:none;
+    font-size: 1.2vw;
+    padding: 0.7rem 1.7rem;
+    font-weight:500;
+    margin-top:5%;
+    border-radius:25px;
+    margin-right: 6%;
+    transition: 0.3s ease-in-out;
+}
+
+.renthouse {
+    margin-right: 0;
+}
+
+.bookhouse:hover, .renthouse:hover {
+    background-color: tomato;
+    color: white;
+}
+
+/*--------------------------------------Footer----------------------------------*/
+footer {
+    width: 90%;
+    margin: auto;
+    text-align:center;
+    color: #444444;
+    margin-top: 5%;
+}
+
+footer h1 {
+    margin-bottom: 3%;
+}
+
+footer p {
+    font-size:1vw;
+    font-weight:500;
+} 
+
+
+footer .fa {
+    color: tomato;
+    padding: 0 1rem;
+    margin-top: 3%;
+}
+
+.bottom-border {
+    border-bottom:1px solid rgb(221, 221, 221);
+    width: 80%;
+    margin:auto;
+    margin-top:3%;
+}
+
+.copyright {
+    font-size: 0.8vw;
+    color: #8a8a8a;
+    font-weight:bold;
+    margin:1%;
+}
+
+@media only screen and (max-width: 700px) {
+    .logo {
+        padding-top: 5%;
+        position: fixed;
+        top: 15px;
+        left: 30px;
+    }
+
+
+
+    nav {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: inline-block;
+        width: 100%;
+        padding: 110px 7% 0;
+        text-align: right;
+        background-color:rgba(22, 22, 22, 0.96);
+        max-height:100px;
+        overflow: hidden;
+        transition:0.4s;
+    }
+
+    .nav-button-container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        padding-left: 15%;
+    }
+
+    .nav-button {
+        margin: 2em 0;
+    }
+
+    .header .fa-bars {
+        visibility: visible;
+        color: white;
+        position: absolute;
+        top: 40px;
+        right: 50px;
+        font-size: 20px;
+    }
+
+
+    .search-bar, .check-in, .check-out {
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    .check-in, .check-out {
+        background: transparent;
+    }
+
+    .search-container {
+        transform:translate(0, 21em)
+    }
+
+    .search-container h1 {
+        visibility:hidden;
+    }
+
+    .mobile-search-heading {
+        visibility: visible;
+        display: block;
+        text-align:center;
+        margin-bottom:4%;
+        font-size:5vw;
+        border-radius:25px;
+        background-color: tomato;
+        padding: 3%;
+        color: white;
+    }
+
+    .search-bar{
+        border-radius:25px;
+        padding:0.8em;
+        padding-bottom:3em;
+
+    }
+    .search-col {
+        border-left:none;
+        border-top:1px solid rgb(202, 202, 202);
+        padding-top: 5%;
+
+    }
+
+    .search-icon {
+        display: inherit;
+        position:absolute;
+        top:100%;
+        left:50%;
+        transform:translate(-50%, -50%)
+    }
+
+    .dropdown-menu {
+        max-height:350px;
+    }
+
+    .c-row-up, .c-row-down {
+        flex-direction:column;
+    }
+
+    .c-row-down {
+        margin-top: 0;
+    }
+
+    .cc-column {
+        margin: 0 0 2rem 0;
+    }
+
+    .countries h1, .optimal h1, .optimal h3, .traveller-review h1 {
+        font-size:5vw;
+    }
+
+    .container-optimal {
+        flex-direction:column;
+    }
+
+    .opt-column {
+        margin:0 0 3rem 0;
+        border-radius: 10px;
+    }
+
+    .opt-column img {
+        box-shadow: 2px 2px 7px 2px rgb(177, 177, 177);
+    }
+
+
+    .long-image span {
+        top:50%;
+        left: 30%;
+    }
+
+    .head-text {
+        font-size:5vw;
+    }
+
+    .description-text {
+        font-size:3vw;
+    }
+
+    .long-image a {
+        margin-top:0.5rem;
+        border-radius: 25px;
+        padding: 0.3rem 1rem;
+    }
+
+    .container-review {
+        flex-direction:column;
+    }
+
+    .rev-column {
+        margin-bottom:2rem;
+    }
+
+    .rev-column p {
+        font-size: 4vw;
+    }
+
+    .bookhouse, .renthouse {
+        font-size: 3vw;
+    }
+    
+    footer h1 {
+        margin-top: 15%;
+        font-size: 4vw;
+    }
+
+    footer p, .copyright {
+        font-size:2vw;
+    }
+
+}
+
+@media only screen and (max-height: 670px) {
+    .search-container {
+        transform:translate(0, 15em)
+    }
+
+}
